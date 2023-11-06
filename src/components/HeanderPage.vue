@@ -1,10 +1,12 @@
 <script>
-export default {
+
+export default { 
+    name: 'HeaderPage',
     components:{
     },
     data() {
       return {
-        name: 'HeaderPage',
+       
         logoSRC: '"../assets/boolean-logo.png"',
         category:['Donna','Uomo','Bambini']
       }
@@ -40,11 +42,13 @@ export default {
 
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 // @use './styles/general.scss';
-@use '../styles/partials/variables';
+//@use '../styles/partials/_variables';
+@use '../styles/partials/variables' as *;
+
 .header-page {
-    background-color: orange;
+    background-color: $header-color;
     // height: 10vh;
     width: 100%;
     position: fixed;
