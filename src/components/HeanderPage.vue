@@ -1,7 +1,21 @@
 <script>
 export default {
-    name: 'HeaderPage',
+    components:{
+    },
+    data() {
+      return {
+        name: 'HeaderPage',
+        logoSRC: '"../assets/boolean-logo.png"',
+        category:['Donna','Uomo','Bambini']
+      }
+    },
+    methods: {
+    
+    }
+
 }
+ 
+
 </script>
 
 <template>
@@ -9,9 +23,9 @@ export default {
         <div class="container">
             <nav class="ds-flex-center navbar">
                 <ul class="ds-flex-center">
-                    <li><a href="#">Donna</a></li>
-                    <li><a href="#">Uomo</a></li>
-                    <li><a href="#">Bambini</a></li>
+                    <li v-for="elem in category"><a href="#">{{ elem }}</a></li>
+                    <!-- <li><a href="#">Uomo</a></li>
+                    <li><a href="#">Bambini</a></li> -->
                 </ul>
                    <a href="#"><img class="img-header" src="../assets/boolean-logo.png"></a>
                 <ul class="ds-flex-center">
@@ -22,7 +36,6 @@ export default {
             </nav>
         </div>
         
-
     </header>
 
 </template>
