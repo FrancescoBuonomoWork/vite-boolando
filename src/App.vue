@@ -1,12 +1,12 @@
 <script>
 import HeaderPage from './components/HeanderPage.vue'
 import Main from './components/Main.vue'
-import Footer from './components/Footer.vue'
+import FooterPage from './components/FooterPage.vue'
 export default {
   components:{
       HeaderPage,
       Main,
-      Footer
+      FooterPage
   },
   data() {
     return {
@@ -23,7 +23,7 @@ export default {
 <template>
   <HeaderPage/>
   <Main/>
-  <Footer/>
+  <FooterPage/>
  
 </template>
 

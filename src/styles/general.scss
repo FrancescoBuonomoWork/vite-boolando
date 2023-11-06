@@ -29,6 +29,12 @@
   max-width: 1000px;
   margin: 0px auto;
 }
+.ds-flex-center{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
 .pt-100{
   padding-top: 100px;
 }

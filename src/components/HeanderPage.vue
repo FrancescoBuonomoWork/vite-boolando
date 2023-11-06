@@ -7,17 +7,17 @@ export default {
 <template>
     <header class="header-page">
         <div class="container">
-            <nav class="ds-flex navbar">
-                <ul class="ds-flex">
+            <nav class="ds-flex-center navbar">
+                <ul class="ds-flex-center">
                     <li><a href="#">Donna</a></li>
                     <li><a href="#">Uomo</a></li>
                     <li><a href="#">Bambini</a></li>
                 </ul>
                    <a href="#"><img class="img-header" src="../assets/boolean-logo.png"></a>
-                <ul class="ds-flex">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                <ul class="ds-flex-center">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,6 +36,7 @@ export default {
     width: 100%;
     position: fixed;
     z-index: 1;
+    color: white;
   .img-header{
     width: 150px;
   }
@@ -43,10 +44,10 @@ export default {
     padding: 18px;
   }
 }
-.ds-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
+// .ds-flex{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     gap: 10px;
+// }
 </style>
