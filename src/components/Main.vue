@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div class="main-page">
-        <div class="container">
+        <div class="container pt-100">
             <div class="row">
                 <div class="col-4">
                     <!--inizio Prima card  -->

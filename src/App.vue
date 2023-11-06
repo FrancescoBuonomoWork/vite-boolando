@@ -1,10 +1,10 @@
 <script>
-import Header from './components/Heander.vue'
+import HeaderPage from './components/HeanderPage.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 export default {
   components:{
-      Header,
+      HeaderPage,
       Main,
       Footer
   },
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <Header/>
+  <HeaderPage/>
   <Main/>
   <Footer/>
  
