@@ -16,3 +16,24 @@
     color: currentColor;
     text-decoration: none;
   }
+  figure > img {
+    display: block;
+    width: 100%;
+  }
+ /* FLEX  */
+ .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+/* Formula per calcolarsi le colonne  */
+.col-4 {
+flex-basis: calc((100% / 12) * 4);
+}
+.row > [class^='col'] {
+padding: 0 10px;
+  margin-bottom: 20px;
+}  

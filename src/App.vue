@@ -1,9 +1,12 @@
 <script>
 import Header from './components/Heander.vue'
-
+import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
 export default {
   components:{
-      Header
+      Header,
+      Main,
+      Footer
   },
   data() {
     return {
@@ -19,6 +22,8 @@ export default {
 
 <template>
   <Header/>
+  <Main/>
+  <Footer/>
  
 </template>
 
