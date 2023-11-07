@@ -14,22 +14,21 @@ export default {
         <!-- nb all interno del figure solo l' img  -->
         <figure class="card__img">
             <!-- immagine  -->
-            <img class="base-img" src="../assets/1.webp">
-            <img class="hovered-img" src="../assets/1b.webp">
+            <img class="base-img" :src="product.frontImage">
+            <img class="hovered-img" :src="product.backImage">
             <div class="heart">&hearts;</div>
             <div class="card__elements">
-                <span class="price-redution">-50%</span>
-                <span class="sustainability">Sostenibilità</span>
+                <span v-show="product.badges[1].type === 'discount'" class="price-redution">{{product.badges[1].value}}</span>
+                <span v-show="product.badges[0].type === 'tag'" class="sustainability">{{product.badges[0].value}}</span>
             </div>
         </figure>
         <div class="card__desciption">
-            <span class="brand">Levi's</span>
+            <span class="brand">{{ product.brand }}</span>
             <h2 class="product">{{ product.name }}</h2>
             <span class="discounted-price">14,99 &euro;
 
             </span>
             <span class="full-price">{{ product.price }} &euro;</span>
-            <!-- nb invece di discotend e full(non propriamente corretti in questo caso dove dopo abbiamo un unico prezzo rosso) si dovrebbe usare first child e last child  -->
         </div>
 
     </div>
