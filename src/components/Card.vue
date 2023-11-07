@@ -1,15 +1,15 @@
 <script>
 export default {
     name: 'Card',
-    props:{
-        
+    props: {
+        product: Object,
+        // name: String
     }
 }
 </script>
 
 <template>
-    
-      <div class="card">
+    <div class="card">
         <!-- nb all interno del figure solo l' img  -->
         <figure class="card__img">
             <!-- immagine  -->
@@ -23,7 +23,7 @@ export default {
         </figure>
         <div class="card__desciption">
             <span class="brand">Levi's</span>
-            <h2 class="product">Relaxed fit tee unisex</h2>
+            <h2 class="product">{{product.name}}</h2>
             <span class="discounted-price">14,99 &euro;
 
             </span>
@@ -31,9 +31,7 @@ export default {
             <!-- nb invece di discotend e full(non propriamente corretti in questo caso dove dopo abbiamo un unico prezzo rosso) si dovrebbe usare first child e last child  -->
         </div>
 
-    </div>   
-    
-   
+    </div>
 </template>
 
 <style scoped>
@@ -114,15 +112,17 @@ export default {
             position: static;
 
         }
+
         .base-img {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
+
         .heart {
-        color: red;
-        }   
+            color: red;
+        }
     }
 }
 </style>
