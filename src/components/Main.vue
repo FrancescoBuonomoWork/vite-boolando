@@ -1,9 +1,13 @@
 <script>
 import Card from './Card.vue'
+import FileJson from '../../db.json'
 export default {
     name: 'Main',
     components:{
-       Card
+       Card,
+    FileJson
+    },
+    created: {
     }
 }
 </script>
