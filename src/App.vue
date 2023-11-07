@@ -22,7 +22,7 @@ export default {
 
 <template>
   <HeaderPage/>
-  <Main/>
+  <Main/> 
   <FooterPage/>
  
 </template>
