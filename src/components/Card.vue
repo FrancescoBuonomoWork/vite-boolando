@@ -18,8 +18,8 @@ export default {
             <img class="hovered-img" :src="product.backImage">
             <div class="heart">&hearts;</div>
             <div class="card__elements">
-                <span v-show="product.badges[1].type === 'discount'" class="price-redution">{{product.badges[1].value}}</span>
-                <span v-show="product.badges[0].type === 'tag'" class="sustainability">{{product.badges[0].value}}</span>
+                <span v-for="badge in product.badges"  :class="badge.type">{{badge.value}}</span>
+                <!-- <span  class="tag">{{product.badges[0].value}}</span> -->
             </div>
         </figure>
         <div class="card__desciption">
@@ -61,14 +61,14 @@ export default {
         left: 0;
     }
 
-    .price-redution {
+    .discount {
         background-color: red;
         color: white;
         padding: 3px;
 
     }
 
-    .sustainability {
+    .tag {
         background-color: green;
         color: white;
         padding: 3px;
