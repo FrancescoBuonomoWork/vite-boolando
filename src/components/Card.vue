@@ -2,8 +2,9 @@
 export default {
     name: 'Card',
     props: {
-        product: Object,
-        // name: String
+        product: {
+            type: Object
+        },
     }
 }
 </script>
@@ -23,11 +24,11 @@ export default {
         </figure>
         <div class="card__desciption">
             <span class="brand">Levi's</span>
-            <h2 class="product">{{product.name}}</h2>
+            <h2 class="product">{{ product.name }}</h2>
             <span class="discounted-price">14,99 &euro;
 
             </span>
-            <span class="full-price">29,99 &euro;</span>
+            <span class="full-price">{{ product.price }} &euro;</span>
             <!-- nb invece di discotend e full(non propriamente corretti in questo caso dove dopo abbiamo un unico prezzo rosso) si dovrebbe usare first child e last child  -->
         </div>
 

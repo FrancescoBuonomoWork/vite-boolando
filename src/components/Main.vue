@@ -1,21 +1,20 @@
 <script>
 import Card from './Card.vue'
-import FileJson from '../db.json' 
+import FileJson from '../db.json'
 export default {
     name: 'Main',
-    components:{
-       Card,
-     FileJson : FileJson.products
+    components: {
+        Card,
     },
-    data(){
-        return{
-           
+    data() {
+        return {
+            products: FileJson.products
         }
     },
-    mounted(){
+    mounted() {
         console.log(FileJson);
     }
-    
+
 }
 </script>
 
@@ -23,16 +22,15 @@ export default {
     <div class="main-page">
         <div class="container pt-100">
             <div class="row">
-                <div 
-                v-for="(card,i) in 6"
-                :product="FileJson"
-                class="col-4"><Card/></div>
-                
-              
-              
+                <div v-for="(product, index) in products" :key="index" class="col-4">
+                    <Card :product="product" />
+                </div>
+
+
+
 
             </div>
-            
+
         </div>
     </div>
 </template>
