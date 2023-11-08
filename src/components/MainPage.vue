@@ -20,6 +20,7 @@ export default {
         // console.log(FileJson);
     },
     created() {
+        // con axios prendo dal server i dati che mi servono 
         axios.get('http://localhost:3000/products')
         .then(res => {
             const products = res.data;
@@ -35,7 +36,7 @@ export default {
     <div class="main-page">
         <div class="container pt-100">
             <div class="row">
-                <div v-for="(product, index) in this.store.products" :key="index" class="col-4">
+                <div v-for="(product, index) in store.products" :key="index" class="col-4">
                     <Card :product="product" />
                 </div>
 

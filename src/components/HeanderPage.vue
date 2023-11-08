@@ -8,7 +8,20 @@ export default {
       return {
        
         logoSRC: '"../assets/boolean-logo.png"',
-        category:['Donna','Uomo','Bambini']
+        category:['Donna','Uomo','Bambini'],
+        iconList:[{
+            link: '#',
+            icon: "fa-solid fa-cart-shopping"
+          },
+          {
+            link: '#',
+            icon: "fa-solid fa-cart-shopping"
+          },
+          {
+            link: '#',
+            icon: "fa-solid fa-cart-shopping"
+          }
+        ]
       }
     },
     methods: {
@@ -31,9 +44,9 @@ export default {
                 </ul>
                    <a href="#"><img class="img-header" src="../assets/boolean-logo.png"></a>
                 <ul class="ds-flex-center">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li v-for="iconLi in iconList"><a :href=iconLi.link><font-awesome-icon :icon= iconLi.icon /></a></li>
+                    <!-- <li><a href="#">2</a></li>
+                    <li><a href="#"><font-awesome-icon icon="fa-solid fa-cart-shopping" /></a></li> -->
                 </ul>
             </nav>
         </div>
