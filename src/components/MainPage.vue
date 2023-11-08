@@ -1,18 +1,21 @@
 <script>
-import Card from './Card.vue'
-import FileJson from '../db.json'
+import Card from './Card.vue';
+import { store } from '../store';
+// import FileJson from '../db.json'
+
 export default {
-    name: 'Main',
+    name: 'MainPage',
     components: {
         Card,
     },
     data() {
         return {
-            products: FileJson.products
+            // products: FileJson.products
+            products: store.products
         }
     },
     mounted() {
-        console.log(FileJson);
+        // console.log(FileJson);
     }
 
 }
@@ -36,6 +39,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.main-page {
+    padding-bottom: 150px;
+}
 // @use './styles/general.scss';
 // .card {
 
