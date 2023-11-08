@@ -16,7 +16,8 @@ export default {
             <!-- immagine  -->
             <img class="base-img" :src="product.frontImage">
             <img class="hovered-img" :src="product.backImage">
-            <div class="heart">&hearts;</div>
+            <div class="heart" :class="product.isInFavorites ? 'red' : ''">
+                &hearts;</div>
             <div class="card__elements">
                 <span v-for="badge in product.badges"  :class="badge.type">{{badge.value}}</span>
                 <!-- <span  class="tag">{{product.badges[0].value}}</span> -->
@@ -36,6 +37,9 @@ export default {
 
 <style scoped>
 .card {
+    .red{
+        color: red;
+    }
 
     .card__img {
         position: relative;
