@@ -2,6 +2,7 @@
 import Card from './Card.vue';
 import { store } from '../store';
 // import FileJson from '../db.json'
+import axios from 'axios';
 
 export default {
     name: 'MainPage',
@@ -10,12 +11,21 @@ export default {
     },
     data() {
         return {
+            store
             // products: FileJson.products
-            products: store.products
+            // products: store.products
         }
     },
     mounted() {
         // console.log(FileJson);
+    },
+    created() {
+        axios.get('http://localhost:3000/products')
+        .then(res => {
+            const products = res.data;
+            // console.log(res,products);
+            this.store.products = products;
+        })
     }
 
 }
@@ -25,7 +35,7 @@ export default {
     <div class="main-page">
         <div class="container pt-100">
             <div class="row">
-                <div v-for="(product, index) in products" :key="index" class="col-4">
+                <div v-for="(product, index) in this.store.products" :key="index" class="col-4">
                     <Card :product="product" />
                 </div>
 

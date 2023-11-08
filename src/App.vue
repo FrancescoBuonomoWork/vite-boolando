@@ -2,7 +2,7 @@
 import HeaderPage from './components/HeanderPage.vue'
 import MainPage from './components/MainPage.vue'
 import FooterPage from './components/FooterPage.vue'
-import { store } from './store'
+
 
 export default {
   components:{
