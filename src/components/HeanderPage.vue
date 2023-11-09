@@ -15,7 +15,7 @@ export default {
           },
           {
             link: '#',
-            icon: "fa-solid fa-cart-shopping"
+            icon: "fa-solid fa-circle-xmark"
           },
           {
             link: '#',

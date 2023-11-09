@@ -39,12 +39,10 @@ export default {
                 <div v-for="(product, index) in store.products" :key="index" class="col-4">
                     <Card :product="product" />
                 </div>
-
-
-
-
             </div>
-
+        </div>
+        <div class="modal">
+            <h6>Titolo modale</h6>
         </div>
     </div>
 </template>
