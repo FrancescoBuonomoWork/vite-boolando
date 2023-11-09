@@ -12,7 +12,8 @@ export default {
     data() {
         return {
             store,
-            open: true,
+            open: false,
+            selectedProduct:{}
             // products: FileJson.products
             // products: store.products
         }
@@ -32,6 +33,13 @@ export default {
     methods:{
         closeModal(){
             this.open = false
+            this.selectedProduct = {}
+        },
+        showModal(product){
+            console.log('show mod',product);
+            this.selectedProduct = product;
+            this.open = true
+
         }
     }
 
@@ -43,14 +51,14 @@ export default {
         <div class="container pt-100">
             <div class="row">
                 <div v-for="(product, index) in store.products" :key="index" class="col-4">
-                    <Card @show="" :product="product" />
+                    <Card @show="showModal" :product="product" />
                 </div>
             </div>
         </div>
         <div v-show="open === true" class="modal-background">
             <div class="modal">
                 <div class="modal__header">
-                    <h6>Titolo modale</h6>
+                    <h6>{{ selectedProduct.name }}</h6>
                     <font-awesome-icon @click="closeModal" class="closeMod" icon="fa-solid fa-circle-xmark" />
 
                 </div>

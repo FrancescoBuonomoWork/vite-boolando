@@ -5,8 +5,15 @@ export default {
         product: {
             type: Object
         },
+    },
+    methods:{
+        onClick(){
+            console.log('titolo cliccato');
+            $emit('show') 
+        }
     }
 }
+
 </script>
 
 <template>
@@ -25,7 +32,7 @@ export default {
         </figure>
         <div class="card__desciption">
             <span class="brand">{{ product.brand }}</span>
-            <h2 class="product">{{ product.name }}</h2>
+            <h2 @click="$emit('show',product)" class="product">{{ product.name }}</h2>
             <span class="discounted-price">14,99 &euro;
 
             </span>
