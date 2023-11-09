@@ -1,6 +1,7 @@
 <script>
 export default {
     name: 'Card',
+    emits: ['show'],
     props: {
         product: {
             type: Object

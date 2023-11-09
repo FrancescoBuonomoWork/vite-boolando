@@ -2,6 +2,7 @@
 
 export default { 
     name: 'HeaderPage',
+    
     components:{
     },
     data() {
