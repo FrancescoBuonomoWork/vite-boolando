@@ -11,11 +11,11 @@ export default {
         category:['Donna','Uomo','Bambini'],
         iconList:[{
             link: '#',
-            icon: "fa-solid fa-cart-shopping"
+            icon: "fa-regular fa-user"
           },
           {
             link: '#',
-            icon: "fa-solid fa-circle-xmark"
+            icon: "fa-regular fa-heart"
           },
           {
             link: '#',
