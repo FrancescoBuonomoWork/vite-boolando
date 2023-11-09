@@ -11,7 +11,8 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            open: true,
             // products: FileJson.products
             // products: store.products
         }
@@ -22,11 +23,16 @@ export default {
     created() {
         // con axios prendo dal server i dati che mi servono 
         axios.get('http://localhost:3000/products')
-        .then(res => {
-            const products = res.data;
-            // console.log(res,products);
-            this.store.products = products;
-        })
+            .then(res => {
+                const products = res.data;
+                // console.log(res,products);
+                this.store.products = products;
+            })
+    },
+    methods:{
+        closeModal(){
+            this.open = false
+        }
     }
 
 }
@@ -37,12 +43,19 @@ export default {
         <div class="container pt-100">
             <div class="row">
                 <div v-for="(product, index) in store.products" :key="index" class="col-4">
-                    <Card :product="product" />
+                    <Card @show="" :product="product" />
                 </div>
             </div>
         </div>
-        <div class="modal">
-            <h6>Titolo modale</h6>
+        <div v-show="open === true" class="modal-background">
+            <div class="modal">
+                <div class="modal__header">
+                    <h6>Titolo modale</h6>
+                    <font-awesome-icon @click="closeModal" class="closeMod" icon="fa-solid fa-circle-xmark" />
+
+                </div>
+            </div>
+            
         </div>
     </div>
 </template>
@@ -51,6 +64,38 @@ export default {
 .main-page {
     padding-bottom: 150px;
 }
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+   .modal__header{
+    display: flex;
+    justify-content: space-between;
+   }
+   .closeMod{
+    cursor: pointer;
+   }
+}
+
 // @use './styles/general.scss';
 // .card {
 
