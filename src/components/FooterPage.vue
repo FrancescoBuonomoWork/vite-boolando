@@ -6,23 +6,23 @@ export default {
             iconListFooter: [
                 {
                     link: '#',
-                    icon: "fa-brand fa-twitter"
+                    icon: ['fab', 'twitter']
                 },
                 {
                     link: '#',
-                    icon: "fa-brand fa-facebook"
+                    icon: ['fab', 'facebook']
                 },
                 {
                     link: '#',
-                    icon: "fa-brand fa-instagram"
+                    icon: ['fab', 'instagram']
                 },
                 {
                     link: '#',
-                    icon: "fa-brand fa-pintrest"
+                    icon: ['fab', 'pinterest']
                 },
                 {
                     link: '#',
-                    icon: "fa-brand fa-youtube"
+                    icon: ['fab', 'youtube']
                 }
             ]
         }
@@ -46,9 +46,10 @@ export default {
                 <div class="col">
                     <h6>Trovaci anche su</h6>
                     <ul class="footer-list">
-                        <li v-for="iconF in iconListFooter" >
+                        <li v-for="iconF in iconListFooter">
                             <a :href="iconF.link">
-                                <font-awesome-icon :icon= iconF.icon />
+                                <!-- <font-awesome-icon :icon= iconF.icon /> -->
+                                <font-awesome-icon :icon="iconF.icon" />
                             </a>
                         </li>
                         <!-- <li>F</li>
