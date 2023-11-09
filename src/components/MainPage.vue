@@ -55,6 +55,8 @@ export default {
                 </div>
             </div>
         </div>
+
+        <!-- Modale qui  -->
         <div v-show="open === true" class="modal-background">
             <div class="modal">
                 <div class="modal__header">
