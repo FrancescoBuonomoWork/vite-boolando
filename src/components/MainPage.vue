@@ -58,9 +58,19 @@ export default {
         <div v-show="open === true" class="modal-background">
             <div class="modal">
                 <div class="modal__header">
-                    <h6>{{ selectedProduct.name }}</h6>
+                    <h6 class="modal-title">{{ selectedProduct.name }}</h6>
                     <font-awesome-icon @click="closeModal" class="closeMod" icon="fa-solid fa-circle-xmark" />
-
+                </div>
+                <div class="modal__body">
+                    <div class="modal__body-img">
+                        <img class="modal-img" :src="selectedProduct.frontImage">
+                        <img class="modal-img" :src="selectedProduct.backImage"> 
+                    </div>
+                    <div class="modal__body-text">
+                        <p>{{ selectedProduct.name }}</p>
+                        <p>{{ selectedProduct.brand }}</p>
+                        <p>{{ selectedProduct.price }} €</p>
+                    </div>
                 </div>
             </div>
             
@@ -94,6 +104,7 @@ export default {
     padding: 20px;
     width: 100%;
     max-width: 500px;
+    max-height: 500px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
    .modal__header{
     display: flex;
@@ -101,6 +112,19 @@ export default {
    }
    .closeMod{
     cursor: pointer;
+   }
+   .modal-title{
+    font-size: 30px;
+    font-weight: 700;
+   }
+   .modal__body{
+    display: flex;
+    gap: 10px;
+   }
+   .modal__body-img{
+    .modal-img{
+        height: 150px;
+    }
    }
 }
 
