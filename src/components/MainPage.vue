@@ -57,7 +57,9 @@ export default {
         </div>
 
         <!-- Modale qui  -->
-        <div v-show="open === true" class="modal-background">
+        <div v-show="open === true" 
+        class="modal-background"
+         @click.self="closeModal">
             <div class="modal">
                 <div class="modal__header">
                     <h6 class="modal-title">{{ selectedProduct.name }}</h6>
